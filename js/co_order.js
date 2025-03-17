@@ -65,7 +65,7 @@ function calcOrder() {
 
    //Calculate the cost of the total order
    var totalCost = initialCost + pCost + salesTax;
-   orderForm.elements.totalCost.value = totalCost
+   orderForm.elements.totalCost.value = totalCost;
 }
 
 
