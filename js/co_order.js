@@ -48,24 +48,33 @@ function calcOrder() {
    var qIndex = orderForm.elements.qty.selectedIndex;
    var quantity = orderForm.elements.qty[qIndex].value;
 
-   //Initial cost = cosst X quantity
+   //Initial cost = model cost X quantity
    var initialCost = mCost * quantity;
-   orderForm.elements.initialCost.value = initialCost;
+   orderForm.elements.initialCost.value = formatUSCurrency(initialCost);
 
    //Retreive the cost of the user's protection plan
    var pCost = document.querySelector('input[name="protection"]:checked').value*quantity;
-   orderForm.elements.protectionCost.value = pCost;
+   orderForm.elements.protectionCost.value = formatNumber(pCost, 2);
 
    //Calculate the order subtotal
-   orderForm.elements.subtotal.value = initialCost + pCost;
+   orderForm.elements.subtotal.value = formatNumber(initialCost + pCost, 2);
 
    //Calculate the sales tax at 5%
    var salesTax = 0.05 *(initialCost + pCost);
-   orderForm.elements.salesTax.value = salesTax;
+   orderForm.elements.salesTax.value = formatNumber(salesTax, 2);
 
    //Calculate the cost of the total order
    var totalCost = initialCost + pCost + salesTax;
-   orderForm.elements.totalCost.value = totalCost;
+   orderForm.elements.totalCost.value = formatUSCurrency(totalCost);
 }
 
+function formatNumber(val, decimals) {
+   return val.toLocaleString(undefined, 
+      {minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals});
+}
 
+function formatUSCurrency(val) {
+   return val.toLocaleString('en-US',
+      {style:"currency", currency:"USD"} );
+}
