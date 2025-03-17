@@ -66,6 +66,24 @@ function calcOrder() {
    //Calculate the cost of the total order
    var totalCost = initialCost + pCost + salesTax;
    orderForm.elements.totalCost.value = formatUSCurrency(totalCost);
+
+   //Event handlers for the web form
+   orderForm.elements.model.onchange = calcOrder;
+   orderForm.elements.qty.onchange = calcOrder;
+
+   var planOptions =
+   document.querySelectorAll('input[name= "protection"]');
+   for (var i = 0; i < planOptions.length; i++) {
+      planOptions[i].onclick = calcOrder;
+   }
+
+//Store the order details
+orderForm.elements.modelName.value = 
+   orderForm.elements.model.options[mIndex].text;
+
+orderForm.elements.protectionName.value =
+   document.querySelector('input[name="protection"]:checked').nextSibling.nodeValue;
+
 }
 
 function formatNumber(val, decimals) {
