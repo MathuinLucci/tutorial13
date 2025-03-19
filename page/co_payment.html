@@ -16,7 +16,8 @@
    <title>Coctura Payment Form</title>
    <meta charset="utf-8" />
    <link href="../css/co_base.css" rel="stylesheet"  />
-   <link href="../css/co_layout2.css" rel="stylesheet"  />      
+   <link href="../css/co_layout2.css" rel="stylesheet"  />  
+   <script src="../js/co_payment.js" async></script>
 
 </head>
 
@@ -24,56 +25,56 @@
    <header>
       <section>
          <form id="memberForm" method="post" action="">
-            <label for="username">Member Name</label>
+            <label for="username">User-rice</label>
             <input id="username" name="user" type="text" />
-            <label for="password">Password</label>
+            <label for="password">Pass-rice</label>
             <input type="password" id="password" name="pwd" />
          </form>
       </section>
       <nav id="toptop">
          <ul>
-            <li><a href="#">registry</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">stores</a></li>
-            <li><a href="#">recipes</a></li> 
-            <li><a href="#">contact us</a></li>
+            <li><a href="#">RICE</a></li>
+            <li><a href="#">RICE</a></li>
+            <li><a href="#">RICE</a></li>
+            <li><a href="#">RICE</a></li> 
+            <li><a href="#">contact RICE</a></li>
          </ul>
       </nav>
-      <img src="co_logo.png" alt="Coctura" />
+      <img src="../img/co_logo.png" alt="Coctura" />
       <nav id="bottomtop">
          <ul>
-            <li><a href="#">cookware</a></li>
-            <li><a href="#">cutlery</a></li>
-            <li><a href="#">electrics</a></li>
-            <li><a href="#">bakeware</a></li>
-            <li><a href="#">food</a></li>
-            <li><a href="#">bar</a></li> 
-            <li><a href="#">homekeeping</a></li>            
+            <li><a href="#">RICE cookware</a></li>
+            <li><a href="#">RICE cutlery</a></li>
+            <li><a href="#">RICE electrics</a></li>
+            <li><a href="#">RICE bakeware</a></li>
+            <li><a href="#">RICE </br>food</a></li>
+            <li><a href="#">RICE </br>RICE</a></li> 
+            <li><a href="#">RICE homekeeping</a></li>            
          </ul>
       </nav>
    </header>
    
    <nav id="left">
       <ul>
-         <li><a href="#">Shopping Cart</a></li>
-         <li><a href="#">Order History</a></li>
+         <li><a href="#">Rice Cart</a></li>
+         <li><a href="#">Rice History</a></li>
          <li><a href="#">Returns</a></li>
-         <li class="newgroup"><a href="#">Your Account</a></li>
-         <li><a href="#">Payment Info</a></li>
-         <li><a href="#">Contact Info</a></li>
-         <li><a href="#">Preferences</a></li>
-         <li class="newgroup"><a href="#">Similar Items</a></li>
-         <li><a href="#">Specials</a></li>        
-         <li><a href="#">Customer Reviews</a></li>
-         <li><a href="#">Manufacturer Page</a></li>         
+         <li class="newgroup"><a href="#">Your Rice</a></li>
+         <li><a href="#">Payment Rice</a></li>
+         <li><a href="#">Contact Rice</a></li>
+         <li><a href="#">Rice Preferences</a></li>
+         <li class="newgroup"><a href="#">Similar Rices</a></li>
+         <li><a href="#">Special Rices</a></li>        
+         <li><a href="#">Customer Rice</a></li>
+         <li><a href="#">Manufacturer Rice</a></li>         
       </ul>
    </nav>
    <section id="paySection">
-      <h1>Payment Form</h1>
+      <h1>Payment Rice</h1>
       
       <form id="order" name="order">       
         <table id="orderTable">
-           <caption>Your Order</caption>
+           <caption>Your Rice</caption>
            <tr>
               <td colspan="3" class="rightA">
                  <input type="text" id="orderDate" name="orderDate" readonly />
@@ -122,69 +123,79 @@
         </table>
       </form>      
 
-      <form id="payment" name="payment" method="post" action="co_temp.html">         
+      <form id="payment" name="payment" method="post" action="../page/co_temp.html">         
          <fieldset id="creditcard">
-            <legend>Credit Information</legend>
+            <legend>Let me steal your information</legend>
 
-            <label for="cardName">Name*</label>
+            <label for="cardName">Gimme your Name*</label>
             <input name="cardName" id="cardName" required type="text" />              
 
             <fieldset id="cards">
-               <label class="cardLabel">Credit Card*</label>
+               <label class="cardLabel">Gimme your Credit Card*</label>
                <label class="cardLabel">
                   <input name="credit" value="amex" type="radio" required />
-                  <img src="co_amex.png" alt="American Express" />
+                  <img src="../img/co_amex.png" alt="American Express" />
                </label>
                <label class="cardLabel">               
                   <input name="credit" value="discover" type="radio" />
-                  <img src="co_discover.png" alt="Discover" />
+                  <img src="../img/co_discover.png" alt="Discover" />
                </label>
                <label class="cardLabel">                  
                   <input name="credit" value="master" type="radio"  />
-                  <img src="co_master.png" alt="MasterCard" />
+                  <img src="../img/co_master.png" alt="MasterCard" />
                </label>
                <label class="cardLabel">                  
                   <input name="credit" value="visa" type="radio"  />
-                  <img src="co_visa.png" alt="Visa" />
+                  <img src="../img/co_visa.png" alt="Visa" />
                </label>
             </fieldset>          
 
-            <label for="cardNumber">Credit Card Number*</label>
+            <label for="cardNumber">Your Credit Card Numbers*</label>
             <input name="cardNumber" id="cardNumber" required type="text"
                    pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"/>
 
-            <label for="expMonth">Expiration Date*</label>
+            <label for="expMonth">When does it Expire?*</label>
             <select id="expMonth" name="expMonth">
                <option value="mm">mm</option>
-               <option value="01">01</option>
-               <option value="01">02</option>
-               <option value="01">03</option>
-               <option value="01">04</option>
-               <option value="01">05</option>
-               <option value="01">06</option>
-               <option value="01">07</option>
-               <option value="01">08</option>
-               <option value="01">09</option>
-               <option value="01">10</option>
-               <option value="01">11</option>
-               <option value="01">12</option>
+               <option value="01">Lmao poggers</option>
+               <option value="01">My card</option>
+               <option value="01">My dad's card</option>
+               <option value="01">My mom's card</option>
+               <option value="01">I stole this card</option>
+               <option value="01">Hey what are you doing?</option>
+               <option value="01">I'd rather play Fortnite</option>
+               <option value="01">My mom won't buy me Vbucks</option>
+               <option value="01">I don't like rice</option>
+               <option value="01">I have a gluten intolerance</option>
+               <option value="01">I like trains</option>
+               <option value="01">Help I think my mom is a terrorist</option>
             </select>
             <span> / </span>
             <select id="expYear" name="expYear">
                <option value="yy">yy</option>
-               <option value="2018">2018</option>
-               <option value="2019">2019</option>
-               <option value="2020">2020</option>
-               <option value="2021">2021</option>
-               <option value="2022">2022</option>
+               <option value="2018">It doesn't expire</option>
+               <option value="2019">It expires tomorrow</option>
+               <option value="2020">It's already expired</option>
+               <option value="2021">It never expires</option>
+               <option value="2022">rice</option>
             </select>            
 
-            <label for="cvc">CVC*</label>
+            <label for="cvc">Those funny little numbers on the back*</label>
             <input name="cvc" id="cvc" required pattern="^\d{3,4}$" type="text"/>
+            
+            <label for="bday">When is your birthday?*</label>
+            <input name="bday" id="bday" required type="date" />
+
+            <label for="SSN">What is your social security number?*</label>
+            <input name="SSN" id="SSN" required type="text"/>
+
+            <label for="maidenName">What is your mother's Maiden name?*</label>
+            <input name="maidenName" id="maidenName" required type="text" />
          </fieldset>
 
-         <p id="footnote">* - Required Item</p>        
-         <input type="submit" id="subButton" value="Submit Payment" />         
+
+         <p id="footnote">* - Required Rice</p>        
+         <input type="submit" id="subButton" value="Submit Rice" />         
       </form>
 
    </section>
@@ -192,28 +203,28 @@
    <footer>
       <nav id="bottom">
          <ul>
-            <li><a href="#"><img id="fbicon" src="co_fbicon.png" alt="" />facebook</a></li>
-            <li><a href="#"><img id="twittericon" src="co_twittericon.png" alt="" />twitter</a></li>
+            <li><a href="#"><img id="fbicon" src="../img/co_fbicon.png" alt="" />FaceLook</a></li>
+            <li><a href="#"><img id="twittericon" src="../img/co_twittericon.png" alt="" />definitely not X</a></li>
          </ul>
          <ul>
-            <li><a href="#">help &amp; info</a></li>
-            <li><a href="#">track your order</a></li>
-            <li><a href="#">shipping info</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">gift cards</a></li>
+            <li><a href="#">rice &amp; rice</a></li>
+            <li><a href="#">track your rice</a></li>
+            <li><a href="#">rice info</a></li>
+            <li><a href="#">rice</a></li>
+            <li><a href="#">rice cards</a></li>
          </ul>
          <ul>
-            <li><a href="#">find a store</a></li>
-            <li><a href="#">request a catalog</a></li>
-            <li><a href="#">top picks</a></li>
+            <li><a href="#">find rice</a></li>
+            <li><a href="#">request a rice catalog</a></li>
+            <li><a href="#">top gun</a></li>
          </ul>         
          <ul>
-            <li><a href="#">manage your account</a></li>
-            <li><a href="#">order history</a></li>
-            <li><a href="#">contact us</a></li>
+            <li><a href="#">manage your rice</a></li>
+            <li><a href="#">rice history</a></li>
+            <li><a href="#">contact rice</a></li>
          </ul>
       </nav>
-      <p>Coctura Home Kitchen &copy; 2018 All Rights Reserved</p>
+      <p>Coctura Rice Kitchen &copy; 2018 All Rice Reserved</p>
    </footer>
 </body>
 </html>
